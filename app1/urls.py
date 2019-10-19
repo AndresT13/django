@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-from app1 import views
+from app1 import views as local_views
+
+
+# Módulo hoteles
+from app1 import views  as hotels_view
+
 
 def test(request):
     return HttpResponse('Soy nivel Pro')
@@ -24,7 +29,9 @@ def test(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', test),
-    path('testUno/', views.testUno),
-    path('test3/', views.test3),
-    path('test4/<str:name>/<str:country>', views.test4)
+    path('testUno/', local_views.testUno),
+    path('test3/', local_views.test3),
+    path('test4/<str:name>/<str:country>', local_views.test4),
+    path('hotels', hotels_views.list_hotels),
+    
 ]
