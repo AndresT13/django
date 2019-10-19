@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 hotels = [
     {
-        'city': 'Bogota',
+        'city': 'Bogotá',
         'user': {
             'administrator': 'Jaime Torres',
 
