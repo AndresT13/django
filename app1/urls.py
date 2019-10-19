@@ -25,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', test),
     path('testUno/', views.testUno),
-    path('test3/', views.test3)
+    path('test3/', views.test3),
+    path('test4/<str:name>/<str:country>', views.test4)
 ]
