@@ -20,7 +20,7 @@ from app1 import views as local_views
 
 
 # Módulo hoteles
-from app1 import views  as hotels_view
+from hotels import views  as hotels_view
 
 
 def test(request):
@@ -32,6 +32,6 @@ urlpatterns = [
     path('testUno/', local_views.testUno),
     path('test3/', local_views.test3),
     path('test4/<str:name>/<str:country>', local_views.test4),
-    path('hotels', hotels_views.list_hotels),
-    
+    path('hotels',hotels_view.list_hotels)
+
 ]

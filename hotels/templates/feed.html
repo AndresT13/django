@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+    <header>
+            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos recusandae consequatur consequuntur sint blanditiis ratione quo totam inventore deserunt est obcaecati repellendus ut atque saepe, ipsam officia tempora veritatis esse.</h1>
+    </header>
+
+<main>
+        {{ data }}   
+        
+
+        {% for hotel in data %}
+            <br><br>
+            {{hotel.city}}
+            <br><br>
+            {{ hotel.user.administrator }}
+            <div >
+            <img  src="{{ hotel.picture }}" height="550px" alt="No muestra la imagen ">
+            </div>
+            {% endfor %}
+
+
+</main>
+       
+
+</body>
+
+
+
+
+<footer>
+
+</footer>
+</html>
